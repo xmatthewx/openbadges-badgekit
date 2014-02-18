@@ -57,6 +57,9 @@ app.get('/badge/:badgeId/issueByClaimCode', 'badge.issueByClaimCode', [persona.e
 app.post('/badge/:badgeId/issueByClaimCode', 'badge.issueByClaimCode', [persona.ensureLoggedIn()], views.badge.issueByClaimCode);
 
 app.get('/images/badge/:badgeId', 'badge.image', views.badge.image);
+app.get('/images/badge/:badgeId.png', 'badge.image', views.badge.image);
+
+app.get('/application', 'application', [persona.ensureLoggedIn()], views.application.pending);
 
 app.get('/settings', 'settings', [persona.ensureLoggedIn()], views.settings.home);
 
