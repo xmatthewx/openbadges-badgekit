@@ -192,9 +192,11 @@
   margin: 0 auto;
 }
 
-.templates-info { width: $four-wide; }
+.templates-info,
+.application-pending-info { width: $four-wide; }
 
-.templates-info-heading {
+.templates-info-heading,
+.pending-info-heading {
   font-size: 20px;
   font-weight: bold;
   color: $light-blue;
@@ -215,9 +217,10 @@
 
   .badgethumb {
     @include drop-shadow;
-    height: 100%;
+    width: $two-wide;
+    height: auto;
     margin: 0 20px 20px 0;
-  background-color: $white;
+    background-color: $white;
   }
   .fa-plus-circle {
     float: left;
@@ -356,4 +359,37 @@
 .small-copy {
   color: $brown;
   margin-top: 0;
+}
+
+/*APPLICATION STYLES*/
+.approval-section {
+  padding: 20px 0;
+  .badgethumb {
+    width: 50px;
+    height: auto;
+    margin: 0 20px 20px 0;
+  }
+  .pending-badge-title { margin-bottom: 0; }
+  .badge-approval-status {
+    margin-top: 0;
+    margin-right: 20px;
+  }
+  .pending-list-table {
+    display: table;
+    width: $five-wide;
+    line-height: 2.5em;
+    &:hover {
+      cursor: pointer;
+      background-color: $lightest-blue;
+    }
+    .pending-cell {
+      display: table-cell;
+      width: 20%;
+      border-bottom: 1px solid $gray;
+    }
+    .pending-button {
+      background-color: $gray;
+    }
+    .email-cell { color: $light-blue; }
+  }
 }
