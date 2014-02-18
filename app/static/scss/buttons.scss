@@ -54,10 +54,8 @@
 
 .pending-btn {
   background-color: $gray;
-  border-bottom: 5px solid $dark-gray;
   &:hover {
     color: $white;
-    opacity: 0.7;
   }
 }
 
