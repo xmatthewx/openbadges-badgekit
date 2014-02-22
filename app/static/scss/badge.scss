@@ -161,7 +161,8 @@
   text-align: center;
 }
 
-.badge-form {
+.badge-form,
+.comment-form {
   width: $five-wide;
   margin: 30px auto;
   background-color: $white;
@@ -195,6 +196,10 @@
   .hidden {
     display: none;
   }
+}
+
+.comment-form {
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
